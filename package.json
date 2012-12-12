@@ -2,12 +2,17 @@
   "name": "format-parser",
   "description": "Declarative format parser for declarative template engines",
   "version": "0.0.1",
-  "keywords": [],
+  "keywords": ["format", "parser", "component"],
   "dependencies": {},
   "development": {},
   "license": "MIT",
   "devDependencies": {
     "mocha": "*",
     "should": "*"
+  },
+  "component": {
+    "scripts": {
+      "format-parser/index.js": "index.js"
+    }
   }
 }
