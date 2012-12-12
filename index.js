@@ -11,15 +11,31 @@ module.exports = function(str){
 	return str.split(/ *\| */).map(function(call){
 		var parts = call.split(':');
 		var name = parts.shift();
-		var args = parts.join(':');
-		
+		var args = parseArgs(parts.join(':'));
+
 		return {
 			name: name,
-			args: parseArgs(args)
+			args: args
 		};
 	});
 };
 
+/**
+ * Parse args `str`.
+ *
+ * @param {String} str
+ * @return {Array}
+ * @api private
+ */
+
 function parseArgs(str) {
-	console.log(str);
+	var args = [];
+	var re = /"([^"]*)"|'([^']*)'|([^ \t,]+)/g;
+	var m;
+	
+	while (m = re.exec(str)) {
+		args.push(m[1] || m[0]);
+	}
+	
+	return args;
 }
