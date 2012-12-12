@@ -12,8 +12,14 @@ module.exports = function(str){
 		var parts = call.split(':');
 		var name = parts.shift();
 		var args = parts.join(':');
+		
 		return {
-			name: name
+			name: name,
+			args: parseArgs(args)
 		};
 	});
 };
+
+function parseArgs(str) {
+	console.log(str);
+}
