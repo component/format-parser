@@ -1,0 +1,13 @@
+{
+  "name": "format-parser",
+  "description": "Declarative format parser for declarative template engines",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "*",
+    "better-assert": "*"
+  }
+}
