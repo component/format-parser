@@ -8,6 +8,6 @@
   "license": "MIT",
   "devDependencies": {
     "mocha": "*",
-    "better-assert": "*"
+    "should": "*"
   }
 }
