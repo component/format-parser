@@ -8,4 +8,13 @@ describe('parse(str)', function(){
 			{ name: 'foo' }
 		]);
 	})
+	
+	it('should support "foo | bar | baz"', function(){
+		var ret = parse('foo | bar | baz');
+		ret.should.eql([
+			{ name: 'foo' },
+			{ name: 'bar' },
+			{ name: 'baz' }
+		]);
+	})
 })
