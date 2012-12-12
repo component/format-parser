@@ -7,9 +7,12 @@
 
     $ component install component/format-parser
 
-## API
+## Example
 
-   
+```js
+var parse = require('format-parser');
+parse('created_at | date:"%Y %M %d"');
+```
 
 ## License
 
