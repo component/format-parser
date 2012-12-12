@@ -26,9 +26,9 @@ describe('parse(str)', function(){
 	})
 	
 	it('should support quoted args', function(){
-		var ret = parse('foo:"bar"');
+		var ret = parse('date:"%Y %d %m:%s"');
 		ret.should.eql([
-			{ name: 'foo', args: ['bar'] }
+			{ name: 'date', args: ['%Y %d %m:%s'] }
 		]);
 	})
 	
