@@ -33,6 +33,14 @@ describe('parse(str)', function(){
 		]);
 	})
 	
+	it('should support single quotes', function(){
+		var ret = parse("created_at | date:'%B %d, %Y at %I:%M%P'");
+		ret.should.eql([
+			{ name: 'created_at', args: [] },
+			{ name: 'date', args: ['%B %d, %Y at %I:%M%P'] }
+		]);
+	})
+	
 	it('should support multiple args', function(){
 		var ret = parse('foo:bar,baz,raz');
 		ret.should.eql([
