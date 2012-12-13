@@ -34,7 +34,7 @@ function parseArgs(str) {
 	var m;
 	
 	while (m = re.exec(str)) {
-		args.push(m[1] || m[0]);
+		args.push(m[2] || m[1] || m[0]);
 	}
 	
 	return args;
