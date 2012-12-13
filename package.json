@@ -1,7 +1,7 @@
 {
   "name": "format-parser",
   "description": "Declarative format parser for declarative template engines",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": ["format", "parser", "component"],
   "dependencies": {},
   "development": {},
