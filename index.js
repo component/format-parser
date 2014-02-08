@@ -1,4 +1,3 @@
-
 /**
  * Parse the given format `str`.
  *
@@ -8,16 +7,21 @@
  */
 
 module.exports = function(str){
-  return str.split(/ *\| */).map(function(call){
+  var arr = str.split(/ *\| */);
+  
+  for (var i = 0; i < arr.length; i++) {
+    var call = arr[i];
     var parts = call.split(':');
     var name = parts.shift();
     var args = parseArgs(parts.join(':'));
-
-    return {
+    
+    arr[i] = {
       name: name,
       args: args
     };
-  });
+  }
+  
+  return arr;
 };
 
 /**
